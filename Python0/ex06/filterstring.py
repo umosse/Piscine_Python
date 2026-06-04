@@ -11,7 +11,6 @@ def main():
 	"""
 	args = sys.argv
 	if len(args) > 3:
-		# raise AssertionError("Too many arguments")
 		print("AssertionError: Wrong arguments")
 		sys.exit(1)
 	if len(args) < 3:
