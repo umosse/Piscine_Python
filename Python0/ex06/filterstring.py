@@ -26,12 +26,11 @@ def main():
 				sys.exit(1)
 	try:
 		intarg = int(sys.argv[2])
-	except:
+	except ValueError:
 		print("AssertionError: Wrong arguments (not int)")
 		sys.exit(1)
 	wordlist = ft_filter(lambda word: len(word) > intarg, args[1].split())
 	print(list(wordlist))
-
 
 
 if __name__ == "__main__":
