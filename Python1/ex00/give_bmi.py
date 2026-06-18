@@ -8,6 +8,14 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
 	height_array = numpy.array(height)
 	weight_array = numpy.array(weight)
 
+	if numpy.issubdtype(height_array.dtype, numpy.number) is False:
+		print("Error: Wrong list type")
+		exit(1)
+
+	if numpy.issubdtype(weight_array.dtype, numpy.number) is False:
+		print("Error: Wrong list type")
+		exit(1)
+
 	if height_array.size != weight_array.size:
 		print("Error: Wrong list size")
 		exit(1)
