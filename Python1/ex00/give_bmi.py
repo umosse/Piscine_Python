@@ -3,7 +3,7 @@ import numpy as numpy
 
 def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
 	"""
-
+	Calculate BMI from a list of heights and weights
 	"""
 	height_array = numpy.array(height)
 	weight_array = numpy.array(weight)
@@ -27,7 +27,7 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
 	"""
-
+	Apply a max limit to the list of BMIs, return true is BMI is over limit
 	"""
 	bmi_array = numpy.array(bmi)
 	bmi_limit = bmi_array < limit
