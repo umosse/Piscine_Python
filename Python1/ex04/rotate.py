@@ -3,7 +3,7 @@ import cv2
 import numpy as numpy
 
 
-def ft_zoom(img_array: numpy.ndarray) -> numpy.ndarray:
+def ft_rotate(img_array: numpy.ndarray) -> numpy.ndarray:
 	"""
 	
 	"""
@@ -23,14 +23,13 @@ def ft_zoom(img_array: numpy.ndarray) -> numpy.ndarray:
 	zoomed_img = zoomed_img[:, :, numpy.newaxis]
 
 	z_height, z_width, z_channel = zoomed_img.shape
-	print('New shape after slicing:', (z_height, z_width, z_channel))
+	print('The shape of image is:', (z_height, z_width, z_channel))
 	return zoomed_img
 
 
 loaded_img = ft_load("animal.jpeg")
-print(loaded_img)
 
-zoomed = ft_zoom(loaded_img)
+zoomed = ft_rotate(loaded_img)
 print(zoomed)
 
 cv2.imshow("", zoomed)
@@ -39,7 +38,7 @@ cv2.destroyAllWindows()
 
 def	main():
 	img_array = ft_load("animal.jpeg")
-	ft_zoom(img_array)
+	ft_rotate(img_array)
 
 if __name__ == "__main__":
 	main()

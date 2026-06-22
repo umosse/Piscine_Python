@@ -25,3 +25,9 @@ def ft_load(path: str) -> list:
 	result_array = numpy.array([result])
 
 	return result_array
+
+def	main():
+	ft_load()
+
+if __name__ == "__main__":
+	main()
