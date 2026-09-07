@@ -1,12 +1,12 @@
 import numpy as numpy
 
 
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(h: list[int | float], w: list[int | float]) -> list[int | float]:
 	"""
 	Calculate BMI from a list of heights and weights
 	"""
-	height_array = numpy.array(height)
-	weight_array = numpy.array(weight)
+	height_array = numpy.array(h)
+	weight_array = numpy.array(w)
 
 	if numpy.issubdtype(height_array.dtype, numpy.number) is False:
 		print("Error: Wrong list type")
@@ -22,7 +22,7 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
 
 	bmi_array = numpy.array(weight_array / (height_array ** 2))
 
-	return(bmi_array)
+	return (bmi_array)
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
@@ -32,11 +32,10 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
 	bmi_array = numpy.array(bmi)
 	bmi_limit = bmi_array < limit
 
-	return(bmi_limit)
+	return (bmi_limit)
 
 
-
-def	main():
+def main():
 	give_bmi()
 	apply_limit()
 

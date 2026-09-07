@@ -22,7 +22,7 @@ def main():
 	message = args[1]
 	cypher = ''
 	for char in message:
-		if char.isalnum() or char == ' ':
+		if char.isalnum() or char.isspace():
 			cypher += NESTED_MORSE[char.upper()]
 		else:
 			print("AssertionError: Wrong arguments")

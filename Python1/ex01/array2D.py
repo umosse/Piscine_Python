@@ -1,14 +1,14 @@
 import numpy as numpy
 
+
 def slice_me(family: list, start: int, end: int) -> list:
 	"""
-	
+	Truncates a 2D array using slicing, prints its shape and returns it.
 	"""
 
 	if type(family) is not list:
 		print("Error: Not a list")
 		exit(1)
-
 
 	family_array = numpy.array(family)
 
@@ -26,12 +26,12 @@ def slice_me(family: list, start: int, end: int) -> list:
 	print("My shape is :", (family_first, family_second))
 	print("My new shape is :", (new_family_first, new_family_second))
 
-	return(new_family_array)
+	return (new_family_array)
 
 
-
-def	main():
+def main():
 	slice_me()
+
 
 if __name__ == "__main__":
 	main()

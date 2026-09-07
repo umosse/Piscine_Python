@@ -11,7 +11,7 @@ def ft_invert(img_array: numpy.ndarray) -> numpy.ndarray:
 	invert = img_array.copy()
 
 	invert = 255 - invert
-	
+
 	print(invert)
 
 	return invert
@@ -26,7 +26,7 @@ def ft_red(img_array: numpy.ndarray) -> numpy.ndarray:
 
 	red[:, :, 1] *= 0
 	red[:, :, 2] *= 0
-	
+
 	print(red)
 
 	return red
@@ -41,10 +41,11 @@ def ft_green(img_array: numpy.ndarray) -> numpy.ndarray:
 
 	green[:, :, 0] -= green[:, :, 0]
 	green[:, :, 2] -= green[:, :, 2]
-	
+
 	print(green)
 
 	return green
+
 
 def ft_blue(img_array: numpy.ndarray) -> numpy.ndarray:
 	"""
@@ -75,8 +76,9 @@ def ft_grey(img_array: numpy.ndarray) -> numpy.ndarray:
 	return grey
 
 
-def	main():
+def main():
 	img_array = ft_load("landscape.jpg")
+	print(img_array)
 
 
 if __name__ == "__main__":

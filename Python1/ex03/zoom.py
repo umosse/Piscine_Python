@@ -5,7 +5,7 @@ import numpy as numpy
 
 def ft_zoom(img_array: numpy.ndarray) -> numpy.ndarray:
 	"""
-	
+	Zooms in an image and returns it cropped.
 	"""
 
 	height, width = img_array.shape[:2]
@@ -37,9 +37,11 @@ cv2.imshow("", zoomed)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-def	main():
+
+def main():
 	img_array = ft_load("animal.jpeg")
 	ft_zoom(img_array)
+
 
 if __name__ == "__main__":
 	main()

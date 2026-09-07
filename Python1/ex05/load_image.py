@@ -3,7 +3,7 @@ import cv2
 
 def ft_load(path: str) -> list:
 	"""
-	
+	Loads an image and returns an array with its format and pixels in RGB format.
 	"""
 
 	print(path)

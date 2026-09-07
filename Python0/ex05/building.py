@@ -2,8 +2,10 @@ import sys
 
 
 def main():
-	"""Display the sum of the upper-case, lower case and puctuation
-	characters as well as digits and spaces in a single string argument."""
+	"""
+	Display the sum of the upper-case, lower case and puctuation
+	characters as well as digits and spaces in a single string argument.
+	"""
 	args = sys.argv
 	if len(args) > 2:
 		# raise AssertionError("Too many arguments")

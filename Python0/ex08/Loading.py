@@ -3,7 +3,7 @@ import os
 
 def ft_tqdm(lst: range) -> None:
 	"""
-
+	Makes a loading bar the same way tqdm does.
 	"""
 	totlen = len(lst)
 	start = os.times()[4]
@@ -25,12 +25,15 @@ def ft_tqdm(lst: range) -> None:
 		bar = f"|{'█' * progress:<{bar_size}}|"
 		percent = progress * 100 // bar_size
 
-		print(f"{percent}%{bar} {step}/{totlen} [{format_time}<{format_eta} {speed:.2f}it/s]", end="\r", flush=True)
+		print(
+			f"{percent}%{bar} {step}/{totlen} "
+			f"[{format_time}<{format_eta} {speed:.2f}it/s]",
+			end="\r", flush=True)
 		yield item
 
 
 def main():
-	for _ in ft_tqdm(0, 333):
+	for _ in ft_tqdm(range(333)):
 		pass
 
 

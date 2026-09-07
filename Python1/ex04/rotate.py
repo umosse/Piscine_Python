@@ -5,7 +5,7 @@ import numpy as numpy
 
 def ft_transpose(img: numpy.ndarray) -> numpy.ndarray:
 	"""
-	
+	Flips the height and width of an image.
 	"""
 
 	rows = img.shape[0]
@@ -17,12 +17,13 @@ def ft_transpose(img: numpy.ndarray) -> numpy.ndarray:
 	for r in range(rows):
 		for c in range(columns):
 			transposed[c][r] = img[r][c]
-	
-	return(transposed)
+
+	return (transposed)
+
 
 def ft_rotate(img_array: numpy.ndarray) -> numpy.ndarray:
 	"""
-	
+	Rotates an image 90 degrees and returns it.
 	"""
 
 	height, width = img_array.shape[:2]
@@ -50,7 +51,7 @@ def ft_rotate(img_array: numpy.ndarray) -> numpy.ndarray:
 	return rotated_img
 
 
-def	main():
+def main():
 	img_array = ft_load("animal.jpeg")
 	rotated = ft_rotate(img_array)
 	print(rotated)
@@ -58,6 +59,7 @@ def	main():
 	cv2.imshow("", rotated)
 	cv2.waitKey(0)
 	cv2.destroyAllWindows()
+
 
 if __name__ == "__main__":
 	main()

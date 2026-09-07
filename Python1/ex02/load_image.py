@@ -1,9 +1,10 @@
 import cv2
 import numpy as numpy
 
+
 def ft_load(path: str) -> list:
 	"""
-	
+	Loads an image and returns an array with its format and pixels in RGB format.
 	"""
 
 	print(path)
@@ -21,13 +22,15 @@ def ft_load(path: str) -> list:
 		for x in range(width):
 			r, g, b = img_rgb[y, x]
 			result.append([r, g, b])
-	
+
 	result_array = numpy.array([result])
 
 	return result_array
 
-def	main():
+
+def main():
 	ft_load()
+
 
 if __name__ == "__main__":
 	main()
