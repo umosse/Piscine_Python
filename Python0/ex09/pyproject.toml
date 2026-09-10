@@ -7,7 +7,7 @@ name = "ft_package"
 version = "0.0.1"
 authors = [
 	{ name = "eagle" },
-	{email = "eagle@42" }
+	{email = "eagle@42.fr" }
 ]
 description = "A small example package"
 readme = "README.md"
@@ -16,4 +16,4 @@ license = "MIT"
 license-files = ["LICEN[CS]E*"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["ft_package"]
+packages = ["src/ft_package"]
