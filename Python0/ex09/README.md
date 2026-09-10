@@ -3,17 +3,29 @@
 ## Build
 
 ```
-python3 -m build
+python -m build
 ```
 
 ## Install
 
 ```
-pip3 install ./dist/ft_package-0.0.1.tar.gz
+pip install ./dist/ft_package-0.0.1.tar.gz
+or
+pip install ./dist/ft_package-0.0.1-py3-none-any.whl
 ```
 
 ## Uninstall
 
 ```
-pip3 uninstall ft_package
+pip uninstall ft_package
+```
+
+## Show
+```
+pip show -v ft_package
+```
+
+## Sources
+```
+https://packaging.python.org/en/latest/tutorials/packaging-projects/
 ```
